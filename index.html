@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <button id="English" onclick="changeLanguage('English')">English</button>
+        <button id="Japanese" onclick="changeLanguage('Japanese')">Japanese</button>
+
+        <h1 id="question">
+
+            <img id='photo' src="dudu-kiss-dudu-roses.gif" title="Bear with rose.">
+
+            <br>
+            <div id = "innerQuestion">Will You Be My Valentines?</div>
+            <br>
+
+            <div id="button" style = "margin:'50%'">
+                <button id="Yes-button" onclick="selectOption('yes')">YES</button>
+                <button id="No-button" onclick="selectOption('no')">NO</button>
+            </div>
+
+        </h1>
+        <script>
+
+            function selectOption(option){
+
+                if (option==='yes'){
+                    document.getElementById('Yes-button').remove();
+                    document.getElementById('No-button').remove();
+                    var newGif = document.getElementById('photo');
+                    newGif.src ='bear-kiss-bear-kisses.gif';
+                }  
+
+                else if (option === 'no'){
+                    var yesButton = document.getElementById("Yes-button");
+                    var noButton = document.getElementById("No-button").innerHTML = 'Are You Sure?...';
+
+                    var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue("font-size");
+                    var newSize = parseFloat(currentFontSize) * 2;
+                    yesButton.style.fontSize = newSize+'px';
+                }  
+
+                else{
+                    alert('Invalid Option!');
+                }
+            }
+
+            function changeLanguage(op){
+
+                if (op === 'Japanese'){
+                    var question = document.getElementById('innerQuestion');
+                    var yesButton = document.getElementById('Yes-button');
+                    var noButton = document.getElementById('No-button');
+
+                    question.innerHTML = 'つきあってくれませんか？';
+                    yesButton.innerHTML = 'うん';
+                    noButton.innerHTML = 'いいえ';
+                }
+                
+                else if (op === 'English'){
+                    var question = document.getElementById('innerQuestion');
+                    var yesButton = document.getElementById('Yes-button');
+                    var noButton = document.getElementById('No-button');
+
+                    question.innerHTML= "Will You Be My Valentines?";
+                    yesButton.innerHTML = 'YES';
+                    noButton.innerHTML = 'NO';
+                }
+                else{
+                    alert('Invalid Option');
+                }
+            }
+        </script>
+
+    </body>
+</html>

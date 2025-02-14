@@ -1,0 +1,61 @@
+body{
+    background-image: url("background1.jpg");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    background-size:cover;
+
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center text inside the body */
+}
+
+
+
+#question{
+
+    font-style:italic;
+    font-size:55px;
+    font-family:'sacramento',cursive;
+    margin-left:30%;
+    margin: 20px;
+
+}
+
+
+#Yes-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    
+}
+
+#No-button {
+    background-color: #f44336;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#photo {
+    width: 150px; /* Set a size for the image */
+    margin-bottom: 20px;
+}
+
+#English{
+    border-color:pink;
+    background-color:rgb(255, 230, 234);
+    color:grey;
+    margin-bottom:10px;
+}
+
+#Japanese{
+    border-color:pink;
+    background-color:rgb(255, 230, 234);
+    color:grey;
+}
