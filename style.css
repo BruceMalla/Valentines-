@@ -52,10 +52,14 @@ body{
     background-color:rgb(255, 230, 234);
     color:grey;
     margin-bottom:10px;
+    cursor:pointer;
+    font-family:'sacramento',cursive;
 }
 
 #Japanese{
     border-color:pink;
     background-color:rgb(255, 230, 234);
     color:grey;
+    cursor:pointer;
+    font-family:'sacramento',cursive;
 }
